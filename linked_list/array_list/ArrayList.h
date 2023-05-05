@@ -1,4 +1,5 @@
 #include "../point/Pointer.h"
+#include "../namecard/NameCard.h"
 #ifndef __ARRAY_LIST_H__
 #define __ARRAY_LIST_H__
 
@@ -11,7 +12,10 @@
 //typedef int LData;
 
 // Point 주소값 배열
-typedef Point * LData;
+//typedef Point * LData;
+
+// NameCard 포인트 배열
+typedef NameCard * LData;
 
 typedef struct __ArrayList
 {

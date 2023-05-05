@@ -45,15 +45,41 @@ int main(void)
 
     printf("\n");
 
+    comPos.xpos = 2;
+    comPos.ypos = 0;
 
+    if(LFirst(&list, &ppos))
+    {
+        if(PointComp(ppos, &comPos) == 1)
+        {
+            ppos = LRemove(&list);
+            free(ppos);
+        }
 
+        while(LNext(&list, &ppos))
+        {
+            if(PointComp(ppos, &comPos) == 1)
+            {
+                ppos = LRemove(&list);
+                free(ppos);
+            }
+        }
+    }
 
+    printf("현재 데이터의 수: %d\n", LCount(&list));
 
+    if(LFirst(&list, &ppos))
+    {
+        ShowPointPos(ppos);
 
+        while(LNext(&list, &ppos))
+        {
+            ShowPointPos(ppos);
 
+        }
+    }
 
-
-
+    printf("\n\n");
 
 
     return 0;
