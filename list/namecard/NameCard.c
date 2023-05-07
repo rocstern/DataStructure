@@ -10,6 +10,7 @@ NameCard * MakeNameCard(char * name, char * phone)
     NameCard *pcard;
     pcard = (NameCard*) malloc(sizeof(NameCard));
 
+    // pcard->name 도 가능
     strcpy((*pcard).name, name);
     strcpy((*pcard).phone, phone);
 

@@ -3,7 +3,7 @@
 #include <string.h>
 
 #include "NameCard.h"
-#include "../array_list/ArrayList.h"
+#include "../array/ArrayList.h"
 
 int main(void)
 {

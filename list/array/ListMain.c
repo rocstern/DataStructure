@@ -3,7 +3,7 @@
 
 int main(void)
 {
-//    List array_list; 밑 선언은 구조체변수명
+//    List array; 밑 선언은 구조체변수명
     struct __ArrayList list;
     int data;
 

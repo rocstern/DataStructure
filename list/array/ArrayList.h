@@ -12,7 +12,7 @@
 //typedef int LData;
 
 // Point 주소값 배열
-//typedef Point * LData;
+//typedef Point * LData;ㅁ오
 
 // NameCard 포인트 배열
 typedef NameCard * LData;
@@ -35,5 +35,7 @@ int LNext(List * plist, LData * pdata);
 
 LData LRemove(List * plist);
 int LCount(List * plist);
+
+void SetSortRule(List * plist, int (*comp)(LData d1, LData d2));
 
 #endif
