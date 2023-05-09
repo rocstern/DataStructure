@@ -7,7 +7,11 @@ set(CMAKE_C_STANDARD 11)
 
 #add_executable(Point list/point/PointListMain.c list/point/Pointer.c list/slink/DLinkedList.c)
 
-add_executable(CLink list/clink/CLinkedListMain.c list/clink/ClinkedList.c)
+#add_executable(CLink list/clink/CLinkedListMain.c list/clink/ClinkedList.c)
 
-add_executable(Emp list/clink/employee/EmployeeMain.c list/clink/employee/Employee.c list/clink/CLinkedList.c)
+#add_executable(Emp list/clink/employee/EmployeeMain.c list/clink/employee/Employee.c list/clink/CLinkedList.c)
 
+
+#add_executable(DLink list/dlink/wdummy/DlinkedListMain.c list/dlink/wdummy/DLinkedList.c)
+
+add_executable(AStack stack/array/ArrayStackMain.c stack/array/ArrayBaseStack.c)
