@@ -17,7 +17,20 @@ void FInsert(List * plist, LData data)
 
 void SInsert(List * plist, LData data)
 {
+    Node * newNode = (Node *)malloc(sizeof(Node));
+    Node * pred = plist->head;
 
+    newNode->data = data;
+
+    while(pred->next != NULL && plist->comp(data, pred->next->data) != FALSE)
+    {
+        pred = pred->next;
+    }
+
+    newNode->next = pred->next;
+    pred->next = newNode;
+
+    plist->numOfData++;
 }
 
 
@@ -82,9 +95,6 @@ int LNext(List * plist, LData * pdata)
 // 마지막 반환 데이터를 삭제하므로 연이은 반복호출을 허용하지 않는다
 LData LRemove(List * plist)
 {
-    if(plist->before == NULL)
-        return FALSE;
-
     Node * rpos = plist->cur;
     LData rdata = plist->cur->data;
 
@@ -107,11 +117,7 @@ int LCount(List * plist)
 // 리스트 정렬의 기준이 되는 함수를 등록한다
 void SetSortRule(List * plist, int (*comp)(LData d1, LData d2))
 {
-
-
-
-
-
+    plist->comp = comp;
 }
 
 
